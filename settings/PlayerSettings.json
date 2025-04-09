@@ -28,7 +28,7 @@
     "laya.spine": true
   },
   "addons": {
-    "laya.ui": "ui2"
+    "laya.ui": "both"
   },
   "splash": {
     "fit": "center"
