@@ -185,8 +185,8 @@
       "_$id": "bbji2e5r",
       "_$type": "GButton",
       "name": "btn",
-      "x": 172,
-      "y": 318,
+      "x": 187,
+      "y": 185,
       "width": 274,
       "height": 88,
       "controllers": {
@@ -313,8 +313,8 @@
       "_$id": "v5nw6t2o",
       "_$type": "GButton",
       "name": "Button",
-      "x": 172,
-      "y": 464,
+      "x": 187,
+      "y": 331,
       "width": 274,
       "height": 88,
       "controllers": {
