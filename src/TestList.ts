@@ -30,8 +30,6 @@ export class TestList extends Laya.Script {
     list6: Laya.GList;
 
 
-
-
     onAwake(): void {
         // 选择模式
         this.list1.selectionMode = Laya.SelectionMode.Single;
@@ -119,12 +117,19 @@ export class TestList extends Laya.Script {
         // 清空时，设置 numItems=0 即可
         this.list6.itemRenderer = (index: number, item: any) => {
             (item as Laya.GButton).title = `item:${index}`;
+            console.log("renderList6Item:", index);
+
         };
-        this.list6.setVirtual();
+        this.list6.itemProvider = (index: number) => {
+            console.log(`list6 itemProvider:${index}`);
+            return this.list6.itemTemplate.url; // 可以为每一个列表项提供一个模板 url
+        }
+        //this.list6.setVirtual();
+
+        // LayaAirIDE\resources\engine\libs\laya.ui2.js 4156行 LayoutType.FlowX 需改为 LayoutType.SingleRow 
+        this.list6.setVirtualAndLoop(); // 循环列表, 只支持单行、单列，不支持FlowX、FlowY和分页布局。
 
         this.list6.numItems = 10;
-        //this.list6.setVirtualAndLoop(); // 循环列表只支持单行或者单列的布局，不支持流动布局和分页布局。
-        //this.list6.refreshVirtualList();
 
     }
 

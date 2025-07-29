@@ -2,13 +2,15 @@ const { regClass, property } = Laya;
 
 @regClass()
 export class TestComboBox extends Laya.Script {
-    declare owner : Laya.GComboBox;
+
+    @property({ type: Laya.GComboBox })
+    comboBox: Laya.GComboBox;
 
     onAwake(): void {
-        this.owner.on(Laya.Event.CHANGED, this, ()=>{
-            console.log(this.owner.selectedIndex);
+        this.comboBox.on(Laya.Event.CHANGED, this, () => {
+            console.log(this.comboBox.selectedIndex);
         });
     }
 
-    
+
 }

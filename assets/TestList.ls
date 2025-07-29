@@ -1675,14 +1675,13 @@
       "scroller": {
         "_$type": "Scroller",
         "direction": 1,
-        "barDisplay": 5,
-        "snapToItem": true
+        "barDisplay": 5
       },
       "_templateNode": {
         "_$ref": "c0hux5ir",
         "_$tmpl": "itemTemplate"
       },
-      "_initItemNum": 5,
+      "_initItemNum": 4,
       "_$child": [
         {
           "_$id": "c0hux5ir",
