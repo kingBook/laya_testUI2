@@ -126,10 +126,9 @@ export class TestList extends Laya.Script {
         }
         //this.list6.setVirtual();
 
-        // LayaAirIDE\resources\engine\libs\laya.ui2.js 4156行 LayoutType.FlowX 需改为 LayoutType.SingleRow 
+        // (此功能测试未成功)
         this.list6.setVirtualAndLoop(); // 循环列表, 只支持单行、单列，不支持FlowX、FlowY和分页布局。
-
-        this.list6.numItems = 10;
+        this.list6.numItems = 5;
 
     }
 
