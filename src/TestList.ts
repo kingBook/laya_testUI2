@@ -5,6 +5,13 @@ type GWidget = Laya.GWidget;
 @regClass()
 export class TestList extends Laya.Script {
 
+    @property({ type: Laya.Node, toTemplate: "_nodeData" })
+    aNode: Laya.Node;
+    _nodeData: any;
+
+    @property({ type: Laya.Node })
+    bNode: Laya.Node;
+
     @property({ type: Laya.GList })
     list1: Laya.GList;
 
@@ -30,14 +37,17 @@ export class TestList extends Laya.Script {
     list6: Laya.GList;
 
 
+
     onAwake(): void {
+        console.log("itemTemplate:", this.list1.itemTemplate);
+        console.log("aNode to _nodeData:", this._nodeData);
+        console.log("bNode to :", new Laya.PrefabImpl(null, this.bNode));
         // 选择模式
         this.list1.selectionMode = Laya.SelectionMode.Single;
         // 侦听点击列表项，列表项为 GButton 时有效
         this.list1.on(Laya.UIEvent.ClickItem, this, (item: Laya.GButton) => {
             console.log("clickList1Item:", item.title);
         });
-
 
         // 设置渲染器
         this.list2.itemRenderer = (index: number, item: Laya.GButton) => {
