@@ -30,7 +30,36 @@
       "name": "label",
       "y": 74,
       "width": 200,
-      "height": 50
+      "height": 50,
+      "title": "text",
+      "icon": "res://2cc45b1f-6d75-4540-819e-cea14a83bbe8",
+      "titleFontSize": 20,
+      "titleWidget": {
+        "_$ref": "rlt3cxgi"
+      },
+      "iconWidget": {
+        "_$ref": "7jsrkr6r"
+      },
+      "_$child": [
+        {
+          "_$id": "rlt3cxgi",
+          "_$type": "GTextField",
+          "name": "txt",
+          "width": 120,
+          "height": 28,
+          "text": "text",
+          "fontSize": 20
+        },
+        {
+          "_$id": "7jsrkr6r",
+          "_$type": "GImage",
+          "name": "img",
+          "width": 10,
+          "height": 10,
+          "src": "res://2cc45b1f-6d75-4540-819e-cea14a83bbe8",
+          "autoSize": false
+        }
+      ]
     }
   ]
 }
